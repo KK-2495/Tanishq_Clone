@@ -7,7 +7,7 @@
 }
 .main {
   width: 100%;
-  height: 3500px;
+  height: 5000px;
 }
 .navbar {
   width: 100%;
@@ -177,7 +177,7 @@
 /* *****Collection**** */
 .collection{
     width: 84%;
-    height: 500px;
+    /* height: 500px; */
     margin: auto;
     margin-bottom: 5%;
     padding-top: 3%;
@@ -284,54 +284,49 @@
     box-shadow: 0 5px 10px rgba(236, 191, 191, 0.5);
 }
 /* ********New for you***** */
-.releases{
+.new4U{
     width: 84%;
-    height: 400px;
+    /* height: 400px; */
     margin: auto;
     margin-bottom: 5%;
     /* border: 1px solid red; */
+    border-top: 2px solid black;
     display: flex;
     justify-content: space-between;
+    padding-top: 3%;
 }
-
-.releases-1{
+.new4UList{
     width: 32%;
-    height: 100%;
     border: 1px solid lightgrey;
     border-radius: 10px;
-}
-
-.releases-1-image{
-    width: 100%;
-    height: 100%;
-    /* border: 2px solid green; */
-    border-radius: 10px;
+    padding-bottom: 30px;
     overflow: hidden;
 }
-
-.releases-1-image img{
+.new4UImage{
     width: 100%;
-    height: 100%;
+    /* border: 2px solid green; */
+    border-radius: 10px;
 }
-
-.releases-1-desc{
+.new4UImage img{
+    width: 100%;
+}
+.new4Uxplore{
     display: flex;
     justify-content: center;
-    margin-top: -20%;
+    margin-top: -30%;
 }
-
-.releases-1-desc button{
+.new4Uxplore button{
     background-color: white;
     width: 150px;
     height: 50px;
-    border-color:1px solid rgb(131,39,41);
+    border:1px solid rgb(131,39,41);
     border-radius: 10px;
     color: rgb(131,39,41);
     font-size: 1em;
     font-weight: bold;
+    outline: none;
 }
-
-.releases-1-desc button:hover{
+.new4Uxplore button:hover{
     background-color: rgb(131,39,41);
     color: white;
     transition: 0.1s;
