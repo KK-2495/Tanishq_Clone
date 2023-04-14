@@ -1,0 +1,218 @@
+.filter{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.filter>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    margin: auto;
+    /* border: 2px solid blue; */
+    font-size: 13px;
+    color: brown;
+    padding: 12px 0px;
+}
+.filterList{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.filterList h4{
+    font-weight: 100;
+    padding-right: 10px;
+}
+/* *****Store Locator**** */
+.storeLocator{
+    width: 100%;
+    border: 1px solid brown;
+    padding: 5px;
+    height: 60px;
+    /* display: flex; */
+}
+.storeLocator>div{
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+.storeLocator>div>div{
+    display: flex;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.storeLocator>div>div img {
+    width: 14%;
+    padding-right: 10px;
+}
+.storeLocator>div>div h5{
+    color: brown;
+    font-size: 12px;
+}
+.storeLocator>div>div:nth-child(2){
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+
+/* *******Content******* */
+.content{
+    width: 87%;
+    margin: auto;
+    /* height: 2000px; */
+    /* border: 2px solid black; */
+}
+.content>div:nth-child(1){
+    display: flex;
+    margin-top: 1%;
+}
+.content>div:nth-child(1)>p{
+    font-size: 15px;
+}
+.content>div:nth-child(1)>h4{
+    font-size: 15px;
+    padding-left: 10px;
+    color: brown;
+}
+.content>div:nth-child(2){
+    display: flex;
+    margin-top: 1%;
+    align-items: center;
+}
+.content>div:nth-child(2)>p{
+    padding-left: 10px;
+    font-weight: bold;
+}
+.content>div:nth-child(3){
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.content>div:nth-child(3)>button{
+    display: flex;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 6px;
+    width: 17%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: gray;
+    cursor: not-allowed;
+}
+.content>div:nth-child(3)>button img {
+    width: 20%;
+}
+.content>div:nth-child(3)>select{
+    width: 20%;
+    padding: 0px 20px;
+    border: 2px solid brown;
+    border-radius: 6px;
+    outline: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* ************Jewels************* */
+.mensJewel{
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.mensJewelList{
+    width: 23%;
+    margin-bottom: 4%;
+    /* height: 360px; */
+    border: 1px solid lightgrey;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mensJewelList:hover{
+    box-shadow: 0 5px 20px rgb(0,0,0,0.3);
+}
+
+.jewelImage{
+    border-bottom: 1px solid lightgrey;
+    height: 250px;
+    overflow: hidden;
+}
+
+.jewelImage img{
+    width: 100%;
+}
+
+.jewelCost{
+    padding: 10px;
+}
+
+.jewelCost>h4{
+    font-size: 14px;
+    padding-bottom: 2%;
+}
+.jewelCost>h4:nth-child(2)>s{
+    color: gray;
+    font-size: 12px;
+}
+.jewelCost>h4:nth-child(2)>s:hover{
+    font-size: 13px;
+}
+.jewelCost p{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.mensJewelList>div:nth-child(3){
+    width: 95%;
+    /* height: 40px; */
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+.mensJewelList>div:nth-child(3) button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    outline: none;
+    border: 1px solid rgb(131,39,41);
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.mensJewelList>div:nth-child(3) button:hover{
+    background-color: rgb(131,39,41);
+    color: white;
+}
+
+.seeMore{
+    display: flex;
+    justify-content: center;
+}
+.seeMore button{
+    padding: 15px;
+    background-color: white;
+    outline: none;
+    border: 1px solid rgb(131,39,41);
+    border-radius: 10px;
+    font-weight: bold;
+    color: rgb(131,39,41);
+}
+.seeMore button:hover{
+    background-color: rgb(131,39,41);
+    color: white;
+}
