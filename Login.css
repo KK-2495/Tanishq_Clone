@@ -79,7 +79,7 @@
     border: 1px solid lightgrey;
     border-radius: 10px;
     outline: none;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .checkBox{
