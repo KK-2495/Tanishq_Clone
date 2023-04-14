@@ -177,7 +177,7 @@
 /* *****Collection**** */
 .collection{
     width: 84%;
-    /* height: 500px; */
+    height: 500px;
     margin: auto;
     margin-bottom: 5%;
     padding-top: 3%;
@@ -197,6 +197,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .collectionImg img{
     border: 2px solid blue;
     width: 100%;
@@ -292,7 +293,6 @@
   width: 84%;
   /* height: 450px; */
   margin: auto;
-  margin-bottom: 5%;
   /* border: 1px solid black; */
   border-top: 2px solid black;
   padding-top: 4%;
@@ -300,6 +300,7 @@
 .sellerList{
   border: 1px solid black;
   width: 23%;
+  height: 410px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -307,16 +308,26 @@
   width: 100%;
 }
 .sellerListCost{
+  width: 100%;
+  height: 38%;
+  /* border: 2px solid blue; */
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .sellerListCost p{
   font-size: 14px;
+  width: 100%;
+  height: 30%;
   /* font-weight: 100; */
 }
 .sellerListCost strong{
   font-size: 16px;
   /* font-weight: 100; */
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  width: 100%;
+  height: 10%;
 }
 .sellerList button{
   border-radius: 5px;
@@ -327,7 +338,8 @@
   font-weight: bold;
   color: #832729;
   width: 100%;
-  /* margin-top: 30px; */
+  height: 30%;
+    /* position: relative; */
 }
 .sellerList button:hover {
   background-color: #832729;
