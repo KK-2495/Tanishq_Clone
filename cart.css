@@ -113,26 +113,99 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .billing{
     width: 35%;
     border: 1px solid red;
 }
+.billing>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    /* border: 1px solid blue; */
+}
+.country{
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+.country select{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.country legend{
+    font-size: 10px;
+    margin-left: -20%;
+}
+.pincode{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    height: 52px;
+    border-radius: 5px;
+    margin-top: 1.5%;
+}
+.pincode input{
+    border: none;
+    outline: none;
+    width: 60%;
+}
+.pincode p{
+    font-size: 14px;
+}
+.orderSummary{
+    background-color: #e7e7e7;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 5%;
+    width: 80%;
+}
+.promoCode{
+    display: flex;
+}
+.promoCode h5:nth-child(1) {
+    width: 50%;
+    border-bottom: 2px solid brown;
+    color: brown;
+}
+.promoCode h5:nth-child(2) {
+    width: 50%;
+    border-bottom: 2px solid gray;
+    color: gray;
+}
+.coupon {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+.coupon input{
+    width: 60%;
+    padding: 10px;
+    background-color: #e7e7e7;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.coupon button {
+    width: 35%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: brown;
+    color: white;
+}
+
+
+
 
 
 .bottomFloater{
