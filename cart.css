@@ -194,6 +194,7 @@
     border: 1px solid gray;
     border-radius: 5px;
     font-size: 14px;
+    outline: none;
 }
 .coupon button {
     width: 35%;
@@ -203,6 +204,12 @@
     background-color: brown;
     color: white;
 }
+.summary >div {
+    display: flex;
+}
+
+
+
 
 
 
