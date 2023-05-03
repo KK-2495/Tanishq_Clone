@@ -187,6 +187,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.buyKart a{
+    text-decoration: none;
+    color: black;
+}
 .addtoKart{
     background-color: white;
     border: 1px solid black;
@@ -350,4 +354,20 @@
     border: none;
     padding: 8px;
     font-size: 13px;
+}
+
+/* *****media Query**** */
+@media screen and (max-width: 770px) {
+    .singleProduct{
+        flex-direction: column;
+    }
+    .product{
+        width: 90%;
+    }
+    .smallImages{
+        display: none;
+    }
+    .productDetail{
+        width: 100%;
+    }
 }

@@ -9,24 +9,6 @@
   width: 100%;
   /* height: 7000px; */
 }
-.navbar {
-  width: 100%;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  background-color: #f2e9e9;
-  display: flex;
-  /* align-items: center; */
-}
-.navbar > div {
-  /* border: 2px solid black; */
-  display: flex;
-  justify-content: space-between;
-  width: 86%;
-  margin: auto;
-  align-items: center;
-}
 .logo {
   width: 7%;
   /* border: 2px solid red; */
@@ -69,11 +51,39 @@
 .search > div:nth-child(4) {
   width: 5%;
 }
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #f2e9e9;
+  display: flex;
+  /* align-items: center; */
+}
+.navbar > div {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  margin: auto;
+  align-items: center;
+}
+.navbar > div >div:nth-child(3) div button {
+  padding: 5px;
+  width: 80px;
+  background-color: #f2e9e9;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 8px;
+}
 .navbar > div > div:nth-child(3) {
   width: 35%;
   display: flex;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
   /* border: 2px solid blue; */
 }
 .stores > img {
@@ -101,6 +111,9 @@
 .titleList p{
   font-size: 15px;
   font-weight: 100;
+}
+.titleList p >a {
+  text-decoration: none;
 }
 .titleList:hover p{
   border-bottom: 2px solid #832729;
@@ -466,7 +479,7 @@
 
 .inner-footer{
   width: 95%;
-  height: 500px;
+  /* height: 500px; */
   border-bottom: 1px solid black;
   margin: auto;
   margin-top: 2%;
@@ -503,7 +516,7 @@
 }
 .inner-bottom-footer{
   width: 95%;
-  height: 100px;
+  /* height: 100px; */
   /* border: 1px solid black; */
   margin: auto;
   margin-top: 2%;
@@ -534,9 +547,69 @@
 }
 .policy{
   text-align: left;
-  justify-content: center;
   font-size: 12px;
   margin-top: 5%;
-  color: rgb(131,39,41);
-  font-weight: 500;
+  color: brown;
 }
+
+/* *******Media Query******** */
+@media screen and (max-width:770px) {
+  .search{
+     display: none;
+  }   
+  .stores img{
+     width: 40%;
+  }
+  .stores p{
+     display: none;
+  }
+ 
+  .title{
+     display: none;
+  }
+  .categoryList{
+    width: 25%;
+  }
+  .gift{
+    width: 75%;
+    height: 450px;
+  }
+  .inner-footer{
+    flex-direction: column-reverse;
+    border-bottom: none;
+  }
+  .inner-footer >div:nth-child(1){
+    display: none;
+  }
+  .inner-footer >div:nth-child(2){
+    display: none;
+  }
+  .inner-footer >div:nth-child(3){
+    display: none;
+  }
+  .topic{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  }
+  .social-logo{
+    width: 100%;
+    justify-content: center;
+  }
+  .inner-bottom-footer{
+    flex-direction: column;
+  }
+  .finance{
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  .finance-logo{
+    width: 20%;
+  }
+  .copyright{
+    width: 100%;
+  }
+  .policy{
+    text-align: center;
+  }
+ }

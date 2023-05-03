@@ -53,6 +53,9 @@
                                 alt="" />
                             <p>CART</p>
                         </div>
+                        <div id="logout">
+                            <button onclick="window.location.href=`./Login.html`">Log In</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +65,7 @@
                     <p>ALL JEWELLERY</p>
                 </div>
                 <div class="titleList">
-                    <p>GOLD</p>
+                    <p><a href="./Mens_Jewel.html">GOLD</a> </p>
                 </div>
                 <div class="titleList">
                     <p>DIAMOND</p>
@@ -421,7 +424,7 @@
                     </div>
                     <div class="collectionDesc">
                         <div class="left">
-                            <p>Men</p>
+                            <p> Men</p>
                         </div>
                         <div class="right">
                             <div class="right1">
@@ -611,11 +614,17 @@
             window.onload = function(){
                 var activeUser = JSON.parse(localStorage.getItem("tanishqActiveUser"));
                 // console.log(activeUser.tanishqUserName);
+                var logoutSwitch = document.getElementById("logout");
                 var convertAccounttoName = document.getElementById("switchUser");
-                var activeTanishqUser = `<p>${activeUser.tanishqUserName}</p>`
+                var activeTanishqUser = `<b>${activeUser.tanishqUserName}</b>`;
+                var logout = `<button onclick="logout()">Log Out</button>`;
                 convertAccounttoName.innerHTML = activeTanishqUser;
+                logoutSwitch.innerHTML = logout;
+            }
+            function logout(){
+                localStorage.removeItem("tanishqActiveUser");
+                window.location.reload();
             }
         </script>
     </body>
-
 </html>

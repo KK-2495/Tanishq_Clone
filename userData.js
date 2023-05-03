@@ -32,9 +32,13 @@ function register(event) {
 
           localStorage.setItem("tanishqUsers", JSON.stringify(multiUsers));
           alert("Registered Successful.");
-          window.location.href = `./Login.html`;
+          document.getElementById("userPhNum").value = "";
+          document.getElementById("userName").value = "";
+          document.getElementById("userPassword").value = "";
+          document.getElementById("userConfirmPassword").value = "";
         } else {
-          alert("You're Already Registered with this Email");
+          alert("You're Already Registered on this Number");
+          window.location.href = `./Login.html`;
         }
       } else {
         alert("Passwords doesn't Match.");

@@ -1,13 +1,13 @@
 .cart{
     width: 85%;
     margin: auto;
-    height: 1000px;
+    /* height: 1000px; */
     margin-top: 3%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .cart>div{
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
 }
@@ -115,7 +115,7 @@
 
 .billing{
     width: 35%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .billing>div:nth-child(1){
     display: flex;
@@ -164,10 +164,10 @@
 }
 .orderSummary{
     background-color: #e7e7e7;
-    padding: 25px;
+    padding: 30px;
     border-radius: 8px;
     margin-top: 5%;
-    width: 80%;
+    width: 90%;
 }
 .promoCode{
     display: flex;
@@ -206,13 +206,20 @@
 }
 .summary >div {
     display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
 }
-
-
-
-
-
-
+.summary h3 {
+    color: brown;
+    padding-top: 40px;
+    font-size: 15px;
+}
+.summary p{
+    font-size: 12px;
+}
+.summary b{
+    color: brown;
+}
 
 
 .bottomFloater{
@@ -256,4 +263,40 @@
     background-color: brown;
     color: white;
     border: none;
+}
+
+
+
+/* *******Media Query******** */
+@media screen and (max-width:770px) {
+ .search{
+    display: none;
+ }   
+ .stores img{
+    width: 40%;
+ }
+ .stores p{
+    display: none;
+ }
+
+ .title{
+    display: none;
+ }
+ .cart>div{
+    flex-direction: column-reverse;
+ }
+ .cartList{
+    width: 100%;
+ }
+ .bottomFloater>div >h2{
+    display: none;
+ }
+ .checkout{
+    width: 90%;
+ }
+ .billing{
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 5%;
+ }
 }

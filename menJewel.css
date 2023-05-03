@@ -159,7 +159,10 @@
 .jewelCost{
     padding: 10px;
 }
-
+.jewelCost a{
+    text-decoration: none;
+    color: black;
+}
 .jewelCost>h4{
     font-size: 14px;
     padding-bottom: 2%;
