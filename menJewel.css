@@ -131,6 +131,10 @@
     justify-content: space-between;
     margin-top: 3%;
 }
+/* **jS style** */
+.mensJewelList>img{
+    width: 100%;
+}
 
 .mensJewelList{
     width: 23%;

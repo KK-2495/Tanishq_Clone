@@ -168,8 +168,8 @@
                     </select>                        
                 </div>
                 <!-- ************Jewellery************* -->
-                <div class="mensJewel">
-                    <div class="mensJewelList">
+                <div class="mensJewel" id="productList">
+                    <!-- <div class="mensJewelList">
                         <div class="jewelImage">
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/512621PHGAAA00.jpg?impolicy=pqmed&imwidth=640" alt="" />
                         </div>
@@ -376,7 +376,7 @@
                         <div>
                             <button>Explore Now</button>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="seeMore">
@@ -475,6 +475,18 @@
             </div>
 
         </div>
+        <script>
+            window.onload = function() {
+                var displayProducts = document.getElementById("productList");
+            var finalData = "";
+
+            var productsFromSeller = JSON.parse(localStorage.getItem("products"));
+            for(var i=0; i<productsFromSeller.length; i++){
+                finalData += `<div class="mensJewelList"><img src=${productsFromSeller[i].proImage} /><h3>${productsFromSeller[i].proName}</h3><p> ${productsFromSeller[i].proPrice}</p></div>`;
+            }
+            displayProducts.innerHTML = finalData;
+            }
+        </script>
     </body>
 
 </html>
