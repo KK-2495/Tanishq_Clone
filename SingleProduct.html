@@ -102,7 +102,7 @@
                             Mens Jewellery |
                             <strong>Artistic Typographic Letter J Gold Pendant</strong>
                         </p>
-                        <div class="productImages">
+                        <div class="productImages" id="productImage">
                             <div class="smallImages">
                                 <div>
                                     <img src="https://staticimg.titan.co.in/Tanishq/Catalog/501719POUAAA00_2.jpg"
@@ -131,7 +131,7 @@
                     <div class="productId">
                         <div>
                             <p>501719POUAAA002JA000209</p>
-                            <h2>Artistic Typographic Letter J Gold Pendant</h2>
+                            <h2 id="productName">Artistic Typographic Letter J Gold Pendant</h2>
                             <div class="reviewProduct">
                                 <div>
                                     <i class="fa-regular fa-star"></i>
@@ -149,7 +149,7 @@
                                     finished with a textured touch.</p>
                             </div>
                             <div class="productPrice">
-                                <h5>Offer Price <strong>₹ 8076.00</strong> <s>₹ 8243.00</s> </h5>
+                                <h5 id="productPrice">Offer Price <strong>₹ 8076.00</strong> <s>₹ 8243.00</s> </h5>
                             </div>
                             <div class="makingCharges">
                                 <p>10 % Off on Making Charges</p>
@@ -176,7 +176,7 @@
                                 <p>Not sure what to buy? Checkout our <strong>Buying Guides</strong></p>
                             </div>
                             <div class="buyKart">
-                                <button class="addtoKart"><a href="./cart.html"> Add to Kart</a></button>
+                                <button onclick="addCart()" class="addtoKart"><a href="./cart.html"> Add to Kart</a></button>
                                 <button class="buyNow">Buy Now</button>
                             </div>
                             <div class="country">
@@ -594,6 +594,23 @@
             </div>
 
         </div>
+        <script>
+                        window.onload = function(){
+                var product = JSON.parse(localStorage.getItem("jewellery"));
+                var addImage = document.getElementById("productImage");
+                var addPrice = document.getElementById("productPrice");
+                var addName = document.getElementById("productName");
+                var addedImage = `<div><img style = "width:90%;"src="${product.proImage}"/></div>`;
+                var addedPrice = `<h1>${product.proPrice}</h1>`;
+                var addedName = `<h3>${product.proName}</h3>`;
+                addImage.innerHTML = addedImage;
+                addPrice.innerHTML = addedPrice;
+                addName.innerHTML = addedName;
+            }
+            function addCart(){
+            alert("Adding to cart");
+        }
+        </script>
     </body>
 
 </html>
