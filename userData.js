@@ -6,6 +6,7 @@ function register(event) {
   var name = document.getElementById("userName").value;
   var password = document.getElementById("userPassword").value;
   var confirmPassword = document.getElementById("userConfirmPassword").value;
+  var tanishqProduct = [];
 
   if (phNum && name && password && confirmPassword) {
     if (password.length >= 8 && confirmPassword.length >= 8) {
@@ -15,6 +16,7 @@ function register(event) {
           tanishqUserName: name,
           tanishqUserPass: password,
           tanishqConfirmPass: confirmPassword,
+          tanishqProduct,
         };
         // console.log(userInfo);
         var multiUsers = JSON.parse(localStorage.getItem("tanishqUsers")) || [];
@@ -22,7 +24,7 @@ function register(event) {
         var flagForEmail = false;
 
         for (var i = 0; i < multiUsers.length; i++) {
-            // console.log(multiUsers[i].tanishqUserPhNum);
+          // console.log(multiUsers[i].tanishqUserPhNum);
           if (multiUsers[i].tanishqUserPhNum == phNum) {
             flagForEmail = true;
           }
@@ -52,29 +54,29 @@ function register(event) {
 }
 
 // **********Login funcitn*****//
- 
+
 function login(event) {
-    event.preventDefault();
-    var phNum = document.getElementById("userPhNum").value;
+  event.preventDefault();
+  var phNum = document.getElementById("userPhNum").value;
 
-    var tanishqLogin = JSON.parse(localStorage.getItem("tanishqUsers"));
-    // console.log(tanishqLogin);
+  var tanishqLogin = JSON.parse(localStorage.getItem("tanishqUsers"));
+  // console.log(tanishqLogin);
 
-    var flagForPhNum = false;
-    var currentUser;
-    for(var i=0; i<tanishqLogin.length; i++){
-        // console.log(tanishqLogin[i].tanishqUserName);
-        if(tanishqLogin[i].tanishqUserPhNum == phNum){
-            flagForPhNum = true;
-            currentUser = tanishqLogin[i];
-            // console.log(currentUser);
-        }
-    }if(flagForPhNum == true){
-        alert("Logged in Succesfully.")
-        localStorage.setItem("tanishqActiveUser", JSON.stringify(currentUser));
-        window.location.href = `./HomePage.html`;
-    }else{
-        alert("Please Register to Login")
+  var flagForPhNum = false;
+  var currentUser;
+  for (var i = 0; i < tanishqLogin.length; i++) {
+    // console.log(tanishqLogin[i].tanishqUserName);
+    if (tanishqLogin[i].tanishqUserPhNum == phNum) {
+      flagForPhNum = true;
+      currentUser = tanishqLogin[i];
+      // console.log(currentUser);
     }
-    
+  }
+  if (flagForPhNum == true) {
+    alert("Logged in Succesfully.");
+    localStorage.setItem("tanishqActiveUser", JSON.stringify(currentUser));
+    window.location.href = `./HomePage.html`;
+  } else {
+    alert("Please Register to Login");
+  }
 }

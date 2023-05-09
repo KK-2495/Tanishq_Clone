@@ -52,7 +52,7 @@
                         <div class="stores">
                             <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNiAyNiI+PGRlZnM+PHN0eWxlPi5ie2ZpbGw6IzgzMjcyOTt9LmN7ZmlsbDpub25lO3N0cm9rZTojZWZlM2UzO308L3N0eWxlPjwvZGVmcz48cGF0aCBjbGFzcz0iYiIgZD0iTTIwLjAyLDIwLjAyYy0xLjI5LDAtMi4zMywxLjA1LTIuMzMsMi4zNHMxLjA0LDIuMzQsMi4zMywyLjM0LDIuMzQtMS4wNSwyLjM0LTIuMzQtMS4wNS0yLjM0LTIuMzQtMi4zNFptLTExLjcsMGMtMS4yOSwwLTIuMzMsMS4wNS0yLjMzLDIuMzRzMS4wNCwyLjM0LDIuMzMsMi4zNCwyLjM0LTEuMDUsMi4zNC0yLjM0LTEuMDUtMi4zNC0yLjM0LTIuMzRabS0uOTgtMTQuMDRoMTQuMjJsLTMuMjMsNS44NUgxMC4xbC0yLjc3LTUuODVabTEwLjk5LDguMTljLjg4LDAsMS42NS0uNDgsMi4wNS0xLjIxbDQuMTktNy41OWMuNDMtLjc3LS4xMy0xLjczLTEuMDItMS43M0g2LjIybC0xLjEtMi4zNEgxLjI5VjMuNjRIMy42M0w3Ljg1LDEyLjUybC0xLjU4LDIuODZjLS44NSwxLjU3LC4yNywzLjQ3LDIuMDUsMy40N2gxNC4wNHYtMi4zNEg4LjMxbDEuMjktMi4zNGg4LjcyWiIvPjxwYXRoIGNsYXNzPSJjIiBkPSJNMjAuMDIsMjAuMDJjLTEuMjksMC0yLjMzLDEuMDUtMi4zMywyLjM0czEuMDQsMi4zNCwyLjMzLDIuMzQsMi4zNC0xLjA1LDIuMzQtMi4zNC0xLjA1LTIuMzQtMi4zNC0yLjM0Wm0tMTEuNywwYy0xLjI5LDAtMi4zMywxLjA1LTIuMzMsMi4zNHMxLjA0LDIuMzQsMi4zMywyLjM0LDIuMzQtMS4wNSwyLjM0LTIuMzQtMS4wNS0yLjM0LTIuMzQtMi4zNFptLS45OC0xNC4wNGgxNC4yMmwtMy4yMyw1Ljg1SDEwLjFsLTIuNzctNS44NVptMTAuOTksOC4xOWMuODgsMCwxLjY1LS40OCwyLjA1LTEuMjFsNC4xOS03LjU5Yy40My0uNzctLjEzLTEuNzMtMS4wMi0xLjczSDYuMjJsLTEuMS0yLjM0SDEuMjlWMy42NEgzLjYzTDcuODUsMTIuNTJsLTEuNTgsMi44NmMtLjg1LDEuNTcsLjI3LDMuNDcsMi4wNSwzLjQ3aDE0LjA0di0yLjM0SDguMzFsMS4yOS0yLjM0aDguNzJaIi8+PC9zdmc+"
                                 alt="" />
-                            <p>CART</p>
+                            <p onclick="redirect()">CART</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                 <p>Not sure what to buy? Checkout our <strong>Buying Guides</strong></p>
                             </div>
                             <div class="buyKart">
-                                <button onclick="addCart()" class="addtoKart"><a href="./cart.html"> Add to Kart</a></button>
+                                <button id="cartButton" class="addtoKart">Add to Kart</button>
                                 <button class="buyNow">Buy Now</button>
                             </div>
                             <div class="country">
@@ -425,26 +425,30 @@
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
                                 <fieldset>
-                                    <input type="text" placeholder="Pincode"/> check
+                                    <input type="text" placeholder="Pincode" /> check
                                 </fieldset>
                             </div>
                             <div class="easyReturn">
                                 <div>
-                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/1018d041-8048-466a-9cbd-4175282d71a9/18.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-1018d041-8048-466a-9cbd-4175282d71a9-o8Bg5hY" alt="">
+                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/1018d041-8048-466a-9cbd-4175282d71a9/18.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-1018d041-8048-466a-9cbd-4175282d71a9-o8Bg5hY"
+                                        alt="">
                                     <p>Purity Guranteed</p>
                                 </div>
                                 <div>
-                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/52d69400-d953-466a-8976-3e71e438f40c/19.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-52d69400-d953-466a-8976-3e71e438f40c-o8BgeIR" alt="">
+                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/52d69400-d953-466a-8976-3e71e438f40c/19.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-52d69400-d953-466a-8976-3e71e438f40c-o8BgeIR"
+                                        alt="">
                                     <p>Easy Returns</p>
                                 </div>
                                 <div>
-                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/c99d35eb-6c32-429b-a2b2-84966bced2f5/20.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-c99d35eb-6c32-429b-a2b2-84966bced2f5-o8Bgj5d" alt="">
+                                    <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/c99d35eb-6c32-429b-a2b2-84966bced2f5/20.svg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-c99d35eb-6c32-429b-a2b2-84966bced2f5-o8Bgj5d"
+                                        alt="">
                                     <p>Free Shipping across India</p>
                                 </div>
                             </div>
                             <div class="stillConfused">
                                 <h2>Still Confused What to Buy?</h2>
-                                <p>Get on live video call with our design experts, or visit your nearest Tanishq store to get an closer look and know more about the product.</p>
+                                <p>Get on live video call with our design experts, or visit your nearest Tanishq store
+                                    to get an closer look and know more about the product.</p>
                                 <button>
                                     Talk to an Expert
                                 </button>
@@ -458,7 +462,8 @@
                 </div>
             </div>
             <div class="banner">
-                <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/d1f34107-0514-42d9-9905-ce94f32695d2/desktop/safeD.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-d1f34107-0514-42d9-9905-ce94f32695d2-desktop-o8BE4jn" alt="">
+                <img src="https://www.tanishq.co.in/wps/wcm/connect/tanishqrt/d1f34107-0514-42d9-9905-ce94f32695d2/desktop/safeD.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_90IA1H80O0T6206GQH590V3000-d1f34107-0514-42d9-9905-ce94f32695d2-desktop-o8BE4jn"
+                    alt="">
             </div>
 
             <div class="writeReview">
@@ -595,21 +600,41 @@
 
         </div>
         <script>
-                        window.onload = function(){
+            window.onload = function () {
                 var product = JSON.parse(localStorage.getItem("jewellery"));
                 var addImage = document.getElementById("productImage");
                 var addPrice = document.getElementById("productPrice");
                 var addName = document.getElementById("productName");
+                var addCart = document.getElementById("cartButton");
                 var addedImage = `<div><img style = "width:90%;"src="${product.proImage}"/></div>`;
                 var addedPrice = `<h1>${product.proPrice}</h1>`;
                 var addedName = `<h3>${product.proName}</h3>`;
+                var addedCart = `<button onclick='addCart(${JSON.stringify(product)})' class="addtoKart">Add to Cart</button>`;
                 addImage.innerHTML = addedImage;
                 addPrice.innerHTML = addedPrice;
                 addName.innerHTML = addedName;
+                addCart.innerHTML = addedCart;
             }
-            function addCart(){
-            alert("Adding to cart");
-        }
+            function addCart(product) {
+                // alert("Adding to cart");
+                var tanishqCurrentUser = JSON.parse(localStorage.getItem("tanishqActiveUser"));
+                var tanishqUserData = JSON.parse(localStorage.getItem("tanishqUsers"));
+                for (var i = 0; i < tanishqUserData.length; i++) {
+                    if (tanishqCurrentUser.tanishqUserPhNum === tanishqUserData[i].tanishqUserPhNum) {
+                        if (tanishqUserData[i].tanishqProduct == undefined) {
+                            tanishqUserData[i].tanishqProduct = [product];
+                        } else {
+                            tanishqUserData[i].tanishqProduct.push(product);
+                        }
+                        alert("Prouct added Successfully");
+                    }
+                }
+                localStorage.setItem("tanishqUsers",JSON.stringify(tanishqUserData));
+
+            }
+            function redirect(){
+                window.location.href = `./cart.html`;
+            }
         </script>
     </body>
 
