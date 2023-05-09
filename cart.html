@@ -97,7 +97,7 @@
 
         <div class="cart">
             <div>
-                <div class="cartList">
+                <div class="cartList" id="productList">
                     <div>
                         <p> <strong>Register / Login </strong> to get Exciting offers & benefits on your Encircle Points!</p>
                     </div>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="productList">
+                    <!-- <div class="productList">
                         <div class="productImage">
                             <img src="https://staticimg.titan.co.in/Tanishq/Catalog/501719POUAAA00.jpg" alt="">
                         </div>
@@ -188,7 +188,7 @@
                                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0OC4yIDQ4LjIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4LjIgNDguMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOm5vbmU7fQoJLnN0MXtmaWxsOiM4NDI3MkE7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGlkPSJQYXRoXzE0MjIiIGNsYXNzPSJzdDAiIGQ9Ik0wLjEsMC4xdjQ4aDQ4di00OEgwLjF6IE00NS4xLDQ1LjFoLTQydi00Mmg0MlY0NS4xeiIvPgoJPGcgaWQ9Ikdyb3VwXzE0MzIyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2Ljg0IDUuMjUpIj4KCQk8cmVjdCB4PSIwLjEiIHk9IjEuOSIgY2xhc3M9InN0MSIgd2lkdGg9IjM0LjMiIGhlaWdodD0iMSIvPgoJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00LjUsMzguN2MtMS4xLDAtMS45LTAuOS0xLjktMlYyLjRoMXYzNC4zYzAsMC41LDAuNCwxLDAuOSwxaDI1LjZjMC41LDAsMC45LTAuNSwwLjktMVYyLjRoMXYzNC4zCgkJCWMwLDEuMS0wLjgsMi0xLjksMkg0LjV6Ii8+CgkJPHJlY3QgeD0iOS44IiB5PSItMSIgY2xhc3M9InN0MSIgd2lkdGg9IjE1IiBoZWlnaHQ9IjEiLz4KCQk8cmVjdCB4PSIxMS42IiB5PSI5LjIiIGNsYXNzPSJzdDEiIHdpZHRoPSIxIiBoZWlnaHQ9IjE5LjUiLz4KCQk8cmVjdCB4PSIyMiIgeT0iOS4yIiBjbGFzcz0ic3QxIiB3aWR0aD0iMSIgaGVpZ2h0PSIxOS41Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+Cg==" alt="">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="billing">
@@ -233,7 +233,7 @@
                             </div>
                             <div>
                                 <b>TOTAL <small>(Incl of all taxes.)</small></b>
-                                <b>₹ 61688</b>
+                                <b id="totalCost">₹ 61688</b>
                             </div>
                         </div>
                     </div>
@@ -243,7 +243,7 @@
 
             <div class="bottomFloater">
                 <div>
-                    <h2>Total (3 items) : ₹ 61688</h2>
+                    <h2 id="totalCostfloat">Total (3 items) : ₹ 61688</h2>
                     <div class="checkout">
                         <button>
                             Continue Shopping
@@ -345,6 +345,41 @@
                 </div>
             </div>
         </div>
+        <script>
+            window.onload = function(){
+                var tanishqCurrentUser = JSON.parse(localStorage.getItem("tanishqActiveUser"));
+                var tanishqUserData = JSON.parse(localStorage.getItem("tanishqUsers"));
+                var productListDiv = document.getElementById("productList");
+                var cartProductList ;
+
+                for(var i=0; i<tanishqUserData.length; i++){
+                    if(tanishqCurrentUser.tanishqUserPhNum == tanishqUserData[i].tanishqUserPhNum){
+                        cartProductList = tanishqUserData[i].tanishqProduct;
+                    }
+                }
+                // console.log(cartProductList);
+                var productList = "";
+                for(var i=0; i<cartProductList.length; i++){
+                    productList += `<div class="productList"><div class="productImage"><img src='${cartProductList[i].proImage}' /></div>
+                    <div class="productDesc"><div>
+                        <h3>${cartProductList[i].proName}</h3>
+                        <b>₹${cartProductList[i].proPrice}</b>
+                        </div></div>
+                    </div></div>`;
+                }
+                productListDiv.innerHTML = productList;
+
+                var totalCostdiv = document.getElementById("totalCost");
+                var totalCostfloat = document.getElementById("totalCostfloat");                
+                var sum = 0;
+                for(var i=0; i<cartProductList.length; i++){
+                    sum += parseInt(cartProductList[i].proPrice);
+                }
+                totalCostdiv.innerHTML = `₹${sum}`;
+                totalCostfloat.innerHTML = `<h4>Total (3 items) : ₹${sum}</h4>`;
+                
+            }
+        </script>
     </body>
 
 </html>
